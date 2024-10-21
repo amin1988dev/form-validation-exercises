@@ -1,10 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-// Percorso alla directory dist (sostituisci con il tuo percorso assoluto)
-const distDir = 'C:/Users/amin.maqsudul/Desktop/MIO/ESERCIZI LARAVEL/form-validation-exercises/dist';
 
-// Funzione che aggiorna gli import ed export
+const distDir = ''; // (sostituisci con il tuo percorso assoluto)
+
+
 function addJsExtensionToImports(directory) {
   const files = fs.readdirSync(directory);
 
@@ -13,13 +13,10 @@ function addJsExtensionToImports(directory) {
     const stats = fs.statSync(filePath);
 
     if (stats.isDirectory()) {
-      // Ricorsione se è una directory
       addJsExtensionToImports(filePath);
-    } else if (file.endsWith('.js')) {
-      // Modifica solo i file .js
-      let content = fs.readFileSync(filePath, 'utf8');
-      // Aggiunge .js a tutti gli import/export che non lo hanno
-      content = content.replace(/(from\s+['"])(\..*?)(['"])/g, '$1$2.js$3');
+    } else if (file.endsWith('.js')) {   // Modifica solo i file .js   
+      let content = fs.readFileSync(filePath, 'utf8');   
+      content = content.replace(/(from\s+['"])(\..*?)(['"])/g, '$1$2.js$3'); // Aggiunge .js a tutti gli import/export che non lo hanno
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Aggiunta estensione .js a ${filePath}`);
     }
