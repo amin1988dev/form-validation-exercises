@@ -29,12 +29,13 @@ Per installare e configurare il progetto, segui questi passaggi:
 
 Dopo aver installato le dipendenze, esegui la compilazione del codice **TypeScript** in **JavaScript** utilizzando il comando:
 
-   ```bash
+   '''bash
    npm run build
+ 
 
 ## Configurazione
 
-Il file **`tsconfig.json`** è già configurato per compilare i file TypeScript e generare il codice JavaScript nella cartella **`dist/`**. Non è necessario modificare nulla per l'uso standard.
+Il file **tsconfig.json** è già configurato per compilare i file TypeScript e generare il codice JavaScript nella cartella **dist/**. Non è necessario modificare nulla per l'uso standard.
 
 Tuttavia, se desideri personalizzare la configurazione di TypeScript, puoi modificare il file **`tsconfig.json`** a seconda delle tue esigenze, ad esempio cambiando il target JavaScript o il percorso di output dei file compilati.
 
