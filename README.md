@@ -29,7 +29,8 @@ Per installare e configurare il progetto, segui questi passaggi:
 
 Dopo aver installato le dipendenze, esegui la compilazione del codice **TypeScript** in **JavaScript** utilizzando il comando:
 
-   '''bash
+   
+   ```bash```
    npm run build
  
 
