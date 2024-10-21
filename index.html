@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registrazione</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0f2f5; /* Colore di sfondo per l'intera pagina */
+    }
+    .form-container {
+      max-width: 600px;
+      margin: 5% auto;
+      background-color: #ffffff; /* Sfondo bianco per il form */
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Aggiunta di un'ombra più pronunciata */
+    }
+    .form-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #007bff;
+      text-align: center;
+    }
+    .form-control {
+      box-shadow: none;
+      border-radius: 0.5rem;
+      transition: border-color 0.3s ease;
+    }
+    .form-control:focus {
+      border-color: #007bff; /* Cambia il colore del bordo al focus */
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+    .btn-custom {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1.25rem;
+      border-radius: 30px;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-custom:hover {
+      background-color: #0056b3;
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    }
+    .error {
+      color: red;
+      font-size: 0.875rem;
+      margin-top: 0.5rem;
+      display: none;
+    }
+    .form-check-label {
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .form-title {
+        font-size: 2rem; /* Riduce la dimensione del titolo su dispositivi più piccoli */
+      }
+      .btn-custom {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h1 class="form-title">Registrazione</h1>
+      <form id="validationForm" class="p-4">
+        <!-- Campo Codice Fiscale -->
+        <div class="mb-3">
+          <label for="codiceFiscale" class="form-label">Codice Fiscale:</label>
+          <input type="text" class="form-control" id="codiceFiscale" name="codiceFiscale" placeholder="Inserisci il tuo Codice Fiscale">
+          <span id="codiceFiscaleError" class="error"></span>
+        </div>
+        <!-- Campo Email -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Inserisci la tua Email">
+          <span id="emailError" class="error"></span>
+        </div>
+        <!-- Campo Password -->
+        <div class="mb-3">
+          <label for="password" class="form-label">Password:</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Crea una password">
+          <span id="passwordError" class="error"></span>
+          <small class="form-text-muted">La password deve contenere almeno 8 caratteri, una lettera maiuscola, una minuscola e un numero.</small>
+        </div>
+        <!-- Campo Numero di Telefono -->
+        <div class="mb-3">
+          <label for="phone" class="form-label">Numero di Cellulare:</label>
+          <input type="text" class="form-control" id="phone" name="phone" placeholder="Inserisci il tuo numero di cellulare">
+          <span id="phoneError" class="error"></span>
+        </div>
+        <!-- Campo Data di Nascita -->
+        <div class="mb-3">
+          <label for="birthDate" class="form-label">Data di Nascita:</label>
+          <input type="text" class="form-control" id="birthDate" name="birthDate" placeholder="gg/mm/aaaa">
+          <span id="birthDateError" class="error"></span>
+        </div>
+        <!-- Campo Codice Postale -->
+        <div class="mb-3">
+          <label for="postalCode" class="form-label">Codice Postale:</label>
+          <input type="text" class="form-control" id="postalCode" name="postalCode" placeholder="Inserisci il Codice Postale">
+          <span id="postalCodeError" class="error"></span>
+        </div>
+        <!-- Campo IBAN -->
+        <div class="mb-3">
+          <label for="iban" class="form-label">IBAN:</label>
+          <input type="text" class="form-control" id="iban" name="iban" placeholder="Inserisci il tuo IBAN">
+          <span id="ibanError" class="error"></span>
+        </div>
+        <!-- Campo Carta di Credito -->
+        <div class="mb-3">
+          <label for="creditCard" class="form-label">Carta di Credito:</label>
+          <input type="text" class="form-control" id="creditCard" name="creditCard" placeholder="Inserisci il numero della tua carta di credito">
+          <span id="creditCardError" class="error"></span>
+        </div>
+        <!-- Campo Partita IVA -->
+        <div class="mb-3">
+          <label for="vatNumber" class="form-label">Partita IVA:</label>
+          <input type="text" class="form-control" id="vatNumber" name="vatNumber" placeholder="Inserisci la Partita IVA">
+          <span id="vatNumberError" class="error"></span>
+        </div>
+        <!-- Campo Nome Utente -->
+        <div class="mb-3">
+          <label for="username" class="form-label">Nome Utente:</label>
+          <input type="text" class="form-control" id="username" name="username" placeholder="Crea un nome utente">
+          <span id="usernameError" class="error"></span>
+        </div>
+        <!-- Campo Indirizzo IP -->
+        <div class="mb-3">
+          <label for="ipAddress" class="form-label">Indirizzo IP:</label>
+          <input type="text" class="form-control" id="ipAddress" name="ipAddress" placeholder="Inserisci il tuo indirizzo IP">
+          <span id="ipAddressError" class="error"></span>
+        </div>
+        <!-- Campo URL -->
+        <div class="mb-3">
+          <label for="url" class="form-label">URL:</label>
+          <input type="text" class="form-control" id="url" name="url" placeholder="Inserisci il tuo sito web">
+          <span id="urlError" class="error"></span>
+        </div>
+        <!-- Campo Numero di Targa -->
+        <div class="mb-3">
+          <label for="licensePlate" class="form-label">Numero di Targa:</label>
+          <input type="text" class="form-control" id="licensePlate" name="licensePlate" placeholder="Inserisci il numero di targa">
+          <span id="licensePlateError" class="error"></span>
+        </div>
+        <!-- Campo Checkbox -->
+        <div class="form-check mb-3">
+          <input type="checkbox" class="form-check-input" id="terms" name="terms">
+          <label class="form-check-label" for="terms">Accetto i termini e le condizioni</label>
+          <span id="termsError" class="error"></span>
+        </div>
+        <!-- Campo Testuale -->
+        <div class="mb-3">
+          <label for="description" class="form-label">Descrizione:</label>
+          <textarea id="description" class="form-control" name="description" rows="3" placeholder="Inserisci una descrizione"></textarea>
+          <span id="descriptionError" class="error"></span>
+        </div>
+        <button type="submit" class="btn btn-custom w-100">Invia</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS e dipendenze -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="./dist/main.js"></script>
+</body>
+</html>

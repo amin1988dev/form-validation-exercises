@@ -1,0 +1,10 @@
+{
+    "name": "form-validation-exercises",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "tsc && node addJsExtension.js"
+    },
+    "devDependencies": {
+        "typescript": "^4.9.5"
+    }
+}
