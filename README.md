@@ -26,25 +26,17 @@ Per installare e configurare il progetto, segui questi passaggi:
 
 ## Compilazione TypeScript
 
+
 Dopo aver installato le dipendenze, esegui la compilazione del codice **TypeScript** in **JavaScript** utilizzando il comando:
 
-```bash
-npm run build
+   ```bash
+   npm run build
 
 ## Configurazione
 
-Il file **`tsconfig.json`** è già configurato per compilare i file TypeScript e generare il codice JavaScript nella cartella **`dist/`**. Non è necessario modificare nulla per un uso standard.
+Il file **`tsconfig.json`** è già configurato per compilare i file TypeScript e generare il codice JavaScript nella cartella **`dist/`**. Non è necessario modificare nulla per l'uso standard.
 
 Tuttavia, se desideri personalizzare la configurazione di TypeScript, puoi modificare il file **`tsconfig.json`** a seconda delle tue esigenze, ad esempio cambiando il target JavaScript o il percorso di output dei file compilati.
 
 
 
-## Esecuzione del Progetto
-
-1. **Apri il file HTML:**
-
-   Dopo aver eseguito la build, apri il file **`index.html`** nel tuo browser per testare l'applicazione.
-
-2. **Opzione: Utilizzo di Live Server (facoltativo):**
-
-   Se stai utilizzando **Visual Studio Code**, puoi installare l'estensione **Live Server** per eseguire il progetto localmente. Una volta installata l'estensione, clicca con il tasto destro sul file `index.html` e seleziona "Open with Live Server". In questo modo, il progetto verrà eseguito su un server locale e potrai vedere le modifiche in tempo reale.
